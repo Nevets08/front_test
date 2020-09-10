@@ -18,23 +18,32 @@ console.log(createObject());
 // - val1: la valeur du paramètre v1
 // - absVal2: la valeur absolue du paramètre v2
 // - somme de v1 et v2
-// function additionObject(v1, v2) {
-// 	const addition = {
-// 		val1: v1,
-// 		absVal2: v2,
-// 		add: val1 + absVal2
-// 	};
+function additionObject(v1, v2) {
+	// votre code  
+	const code = new Object();
+	code.val1 = v1;
+	code.absVal2 = Math.abs(v2);
+	code.somme = v1 + v2;
 
-// 	return addition;
-// }
+	return code;
+}
 
-// console.log(additionObject(2, 6));
-// console.log(additionObject(-5, -10));
+console.log(additionObject(2, 6));
+console.log(additionObject(-5, -10));
 
 // Retournez un tableau avec uniquement des nombres impairs supérieurs à 0
 // Si le tab passé en paramètre est null, retournez un tableau vide
 function removeEvenNumbers(tab) {
-	// votre code
+	const lol = document.getElementById('lol');
+	let arrayNumbers = [tab];
+
+	// for (let i = 0; i < arrayNumbers.length; i++) {
+		const resultArrayNumbers = arrayNumbers.filter(arrayNumber => Math.sign(arrayNumber) === 1);
+		console.log(resultArrayNumbers);
+	// }
+
+
+
 }
 
 console.log(removeEvenNumbers([]));
@@ -73,8 +82,7 @@ function multTables(max) {
 
 console.log(multTables(5));
 
-const products = [
-	{
+const products = [{
 		model: "Xiaomi Mi 9",
 		size: "74.7 mm X 157.5 mm X 7.6 mm",
 		weight: "173"
@@ -126,6 +134,3 @@ function howLongIsItTab(tab) {
 let newProducts = howLongIsItTab(products);
 console.log(products);
 console.log(newProducts);
-
-
-
